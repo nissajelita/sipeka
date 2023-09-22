@@ -111,10 +111,12 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
+                        <li> <a class="waves-effect waves-dark" href="<?=base_url('/') ?>" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
+                        <?php if((session()->has('group_id') && session()->get('group_id') == 2)) {?>
                         <li> <a class="waves-effect waves-dark" href="<?=base_url('/user')?>" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">User</span></a>
                         </li>
+                        <?php } ?>
                         <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Basic Table</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">Icons</span></a>

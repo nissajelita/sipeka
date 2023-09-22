@@ -1,10 +1,12 @@
 <form id="formEditUser">
     <div class="form-group">
         <label for="namaUser">Nama User</label>
-        <input type="text" class="form-control" id="namaUser" name="namaUser" aria-describedby="namaUsers" placeholder="Nama User" value="<?=$user['nm_user'] ?>" readonly>
+        <input type="text" class="form-control" id="namaUser" name="namaUser" aria-describedby="namaUsers" placeholder="Nama User" value="<?=$user['nm_user'] ?>">
     </div>
     <div class="form-group">
         <label for="username">Username</label>
+        <input type="text" class="form-control" id="id_user" name="id_user" value="<?=$user['id_user'] ?>" hidden>
+        <input type="text" class="form-control" id="usr_pwd" name="usr_pwd" value="<?=$user['usr_pwd'] ?>" readonly>
         <input type="text" class="form-control" id="username" name="username" aria-describedby="usernames" placeholder="Username" value="<?=$user['uname'] ?>" readonly>
     </div>
     <div class="form-group">
@@ -26,8 +28,8 @@
         <input type="password" class="form-control" id="passwordUser" name="passwordUser">
         <small id="passwordHelp" class="form-text text-muted "><span class="text-danger">Biarkan kosong jika tidak ingin diganti</span></small>
     </div>
-    <div class="mt-1">
-        &nbsp;
-        <button type="submit" class="btn btn-primary w-100" onclick="btnUpdateUser()">Update</button>
-    </div>
 </form>
+<div class="mt-1">
+    &nbsp;
+    <button type="submit" class="btn btn-primary w-100" onclick="btnUpdateUser()">Update</button>
+</div>

@@ -24,9 +24,16 @@ class M_User extends Model
     }
 
     public function post_save_data_user($data)
-{
-    $query = $this->db->table('mst_user')->insert($data);
-    return $query ? true : false;
-}
+    {
+        $query = $this->db->table('mst_user')->insert($data);
+        return $query ? true : false;
+    }
+
+    public function post_update_data_user($data)
+    {
+        $query = $this->db->query("update mst_user set nama_user = ?"
+    );
+
+    }
 
 }

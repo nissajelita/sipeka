@@ -25,8 +25,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($user as $key => $usr) { 
-                                    $no = 1;?>
+                                <?php 
+                                    $no= 1;
+                                    foreach ($user as $key => $usr) { ?>
                                     <tr>
                                         <td><?= $no++ ?></td>
                                         <td><?= $usr['nm_user'] ?></td>

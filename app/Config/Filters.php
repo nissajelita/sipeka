@@ -2,6 +2,10 @@
 
 namespace Config;
 
+use App\Filters\AuthFilter;
+use App\Filters\BelumLogin;
+use App\Filters\SudahLogin;
+use App\Filters\IsAdmin;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -24,6 +28,10 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'belumLogin'    => BelumLogin::class,
+        'sudahLogin'    => SudahLogin::class,
+        'sudahLogin'    => SudahLogin::class,
+        'isAdmin'       => IsAdmin::class
     ];
 
     /**

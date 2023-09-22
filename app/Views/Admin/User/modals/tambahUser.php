@@ -11,7 +11,7 @@
                 <form id="formTambahUser">
                     <div class="form-group">
                         <label for="namaUser">Nama User</label>
-                        <input type="text" class="form-control" id="namaUser" name="namaUser" aria-describedby="namaUsers" placeholder="Nama User" value="tes">
+                        <input type="text" class="form-control" id="namaUser" name="namaUser" aria-describedby="namaUsers" placeholder="Nama User">
                         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                     </div>
                     <div class="form-group">
