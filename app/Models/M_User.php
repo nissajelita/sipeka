@@ -31,8 +31,15 @@ class M_User extends Model
 
     public function post_update_data_user($data)
     {
-        $query = $this->db->query("update mst_user set nama_user = ?"
-    );
+        // $query = $this->db->query("update mst_user set nama_user = ?"
+        $builder = $this->db->table('mst_user');
+        $builder->set('nm_user', $data['nm_user']);
+        $builder->set('group_id', $data['group_id']);
+        $builder->set('usr_pwd', $data['usr_pwd']);
+        $builder->set('stt_user', $data['stt_user']);
+        $builder->where('id_user', $data['id_user']);
+        $builder->update();
+        return $builder ? true : false;
 
     }
 

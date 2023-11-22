@@ -6,7 +6,7 @@
     <div class="form-group">
         <label for="username">Username</label>
         <input type="text" class="form-control" id="id_user" name="id_user" value="<?=$user['id_user'] ?>" hidden>
-        <input type="text" class="form-control" id="usr_pwd" name="usr_pwd" value="<?=$user['usr_pwd'] ?>" readonly>
+        <input type="text" class="form-control" id="usr_pwd" name="usr_pwd" value="<?=$user['usr_pwd'] ?>" readonly hidden>
         <input type="text" class="form-control" id="username" name="username" aria-describedby="usernames" placeholder="Username" value="<?=$user['uname'] ?>" readonly>
     </div>
     <div class="form-group">

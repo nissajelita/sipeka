@@ -28,29 +28,48 @@ class C_User extends BaseController
         $password = $this->request->getPost('passwordUser');
         $id_user = $this->request->getPost('id_user');
 
-        if($id_user != null || $id_user != ''){
-        // edit user
+        if($id_user != null || $id_user != '') {
+            // edit user
             $data['nm_user'] = $this->request->getPost('namaUser');
             $data['group_id'] = $this->request->getPost('jenisUser');
-            if($password != null || $password != ''){
+            if($password != null || $password != '') {
                 $data['usr_pwd'] = password_hash($password, PASSWORD_DEFAULT);
-            }
-            else{
+            } else {
                 $oldPassword = $this->request->getPOst('usr_pwd');
                 $data['usr_pwd'] = $oldPassword;
 
             }
             $data['stt_user'] = $this->request->getPost('sttUser');
+            $data['id_user'] = $id_user;
+            // dd($data);
 
+            try {
+                $update_user = $this->userModel->post_update_data_user($data);
+
+                if ($update_user) {
+                    $result = array(
+                        'Code' => 200,
+                        'Message' => 'User Berhasil Diupdate'
+                    );
+                } else {
+                    throw new Exception('Gagal menyimpan data user');
+                }
+            } catch (Exception $e) {
+                $result = array(
+                    'Status' => array(
+                        'Code' => 500,
+                        'Message' => $e->getMessage()
+                        )
+                    );
+            }
 
 
         // edit user
-        }
-        else{
+        } else {
             // simpan user baru
             // Cek username di tabel
             $data_username = $this->userModel->get_data_user_by_username($username)->getRowArray();
-            
+
             if ($data_username) {
                 $result = array(
                         'Code' => 400,
@@ -63,10 +82,10 @@ class C_User extends BaseController
                 $data['usr_pwd'] = password_hash($password, PASSWORD_DEFAULT);
                 $data['stt_user'] = 1;
                 // dd($data);
-    
+
                 try {
                     $insert_result = $this->userModel->post_save_data_user($data);
-    
+
                     if ($insert_result) {
                         $result = array(
                             'Code' => 200,
@@ -82,10 +101,10 @@ class C_User extends BaseController
                             'Message' => $e->getMessage()
                             )
                         );
-                    }
                 }
-                // simpan user baru
             }
+            // simpan user baru
+        }
 
         return json_encode($result);
     }
