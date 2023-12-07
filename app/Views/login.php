@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="<?=base_url()?>/templates/assets/plugins/bootstrap/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>/templates/app-assets/plugins/bootstrap/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -95,13 +95,13 @@
     
 </body>
 <!-- Bootstrap core JavaScript-->
-<script src="<?=base_url()?>/templates/assets/plugins/jquery/jquery.min.js"></script>
-<script src="<?=base_url()?>/templates/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?=base_url()?>/templates/app-assets/plugins/jquery/jquery.min.js"></script>
+<script src="<?=base_url()?>/templates/app-assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="<?=base_url()?>/templates/assets/plugins/jquery/jquery-easing/jquery.easing.min.js"></script>
+<script src="<?=base_url()?>/templates/app-assets/plugins/jquery/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="<?=base_url()?>/templates/assets/plugins/bootstrap/js/sb-admin-2.min.js"></script>
+<script src="<?=base_url()?>/templates/app-assets/plugins/bootstrap/js/sb-admin-2.min.js"></script>
 
 </html>
