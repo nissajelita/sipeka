@@ -3,6 +3,32 @@
 
     });
 
+     function refresh() {
+        $.ajax({
+            url: "<?= base_url('poli/daftar-poli'); ?>",
+            method: "POST",
+            async: true,
+            dataType: 'HTML',
+            data: {},
+            beforeSend: function() {
+                $("#loading").show();
+                $("#dataPoli").hide();
+            },
+            complete: function() {
+                $("#loading").hide();
+                $("#dataPoli").show();
+            },
+            success: function(data) {
+                document.getElementById('dataPoli').innerHTML = data
+                feather.replace();
+                $('#tblPoli').DataTable({
+                    "destroy": true,
+                });
+            }
+        });
+        return false;
+    }
+
     function btnSimpanProdi() {
         console.log($('#formTambahProdi').serialize());
         Swal.fire({

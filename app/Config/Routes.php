@@ -27,3 +27,8 @@ $routes->add('user/edituser', 'Admin\C_User::editUser', ['filter' => 'belumLogin
 $routes->add('universitas', 'Admin\C_universitas::index', ['filter' => 'isAdmin']);
 $routes->add('universitas/simpan', 'Admin\C_universitas::simpan', ['filter' => 'isAdmin']);
 $routes->add('tes-kepribadian', 'Admin\C_TesKepribadian::index', ['filter' => 'isAdmin']);
+$routes->add('tes-kepribadian/table', 'Admin\C_TesKepribadian::tesKepDataTable', ['filter' => 'isAdmin']);
+
+// TRANSAKSI PENGISIAN KUIS
+$routes->add('/quiz-kepribadian', 'Admin\C_TesKepribadian::indexQuizKepribadian', ['filter' => 'isAdmin']);
+$routes->add('/quiz-kepribadian/save', 'Admin\C_TesKepribadian::saveHasilTesKepribadian', ['filter' => 'isAdmin']);

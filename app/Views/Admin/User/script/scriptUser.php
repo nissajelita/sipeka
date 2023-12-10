@@ -5,7 +5,7 @@
     });
 
     function btnSimpanUser() {
-        // alert('test');
+        // alert('test');   
         console.log($('#formTambahUser').serialize());
         Swal.fire({
         title: 'Konfirmasi',

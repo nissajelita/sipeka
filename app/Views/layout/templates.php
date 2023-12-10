@@ -16,6 +16,7 @@
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>/templates/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>/templates/app-assets/vendors/css/forms/wizard/bs-stepper.min.css">
     <!-- END: Vendor CSS-->
 
 
@@ -34,6 +35,8 @@
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>/templates/app-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>/templates/app-assets/css/themes/semi-dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>/templates/app-assets/css/plugins/forms/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>/templates/app-assets/css/plugins/forms/form-wizard.css">
     <!-- END: Page CSS-->
 
     
@@ -113,7 +116,7 @@
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class="active nav-item"><a class="d-flex align-items-center"  href="<?=base_url('/')?>"><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Home">Dashboard</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="layout"></i><span class="menu-title text-truncate" data-i18n="Page Layouts">Data Master</span><span class="badge badge-light-danger rounded-pill ms-auto me-1">2</span></a>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="layout"></i><span class="menu-title text-truncate" data-i18n="Page Layouts">Data Master</span></a>
                     <ul class="menu-content">
                         <li><a class="d-flex align-items-center" href="<?=base_url('/user')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Collapsed Menu">User</span></a>
                         </li>
@@ -121,9 +124,11 @@
                         </li>
                         <li><a class="d-flex align-items-center" href="<?=base_url('/tes-kepribadian')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Without Menu">Tes Kepribadian</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="layout-empty.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Layout Empty">Layout Empty</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="layout-blank.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Layout Blank">Layout Blank</span></a>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="info"></i><span class="menu-title text-truncate" data-i18n="Page Layouts">Quiz</span><span class="badge badge-light-danger rounded-pill ms-auto me-1">2</span></a>
+                    <ul class="menu-content">
+                        <li><a class="d-flex align-items-center" href="<?=base_url('/quiz-kepribadian')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Collapsed Menu">Tes Kepribadian</span></a>
                         </li>
                     </ul>
                 </li>
@@ -169,7 +174,7 @@
 
     <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light">
-        <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2021<a class="ms-25" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a><span class="d-none d-sm-inline-block">, All rights Reserved</span></span><span class="float-md-end d-none d-md-block">Hand-crafted & Made with<i data-feather="heart"></i></span></p>
+        <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2023<a class="ms-25"> Istiqamatul Badriah</a><span class="d-none d-sm-inline-block">, All rights Reserved</span></span><span class="float-md-end d-none d-md-block">Hand-crafted & Made with<i data-feather="heart"></i></span></p>
     </footer>
     <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
     <!-- END: Footer-->
@@ -179,8 +184,11 @@
     <script src="<?=base_url()?>/templates/app-assets/vendors/js/vendors.min.js"></script>
     <script src="<?=base_url()?>/templates/app-assets/vendors/js/jquery/jquery.easing.min.js"></script>
     <script src="<?=base_url()?>/templates/app-assets/vendors/js/jquery/jquery.min.js"></script>
-    <script src="<?=base_url()?>/templates/app-assets/vendors/js/jqueryjquery.slimscroll.js"></script>
+    <script src="<?=base_url()?>/templates/app-assets/vendors/js/jquery/jquery.slimscroll.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="<?=base_url()?>/templates/app-assets/vendors/js/forms/wizard/bs-stepper.min.js"></script>
+    <script src="<?=base_url()?>/templates/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="<?=base_url()?>/templates/app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
@@ -205,6 +213,7 @@
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Page JS-->
+    <script src="<?=base_url()?>/templates/app-assets/js/scripts/forms/form-wizard.js"></script>
     <!-- BEGIN: Page Vendor JS-->
     <script src="<?=base_url()?>/templates/app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
     <script src="<?=base_url()?>/templates/app-assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
