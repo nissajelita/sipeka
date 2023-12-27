@@ -12,7 +12,7 @@ class BelumLogin implements FilterInterface
     {
         // Do something here
         if(!session()->get('group_id')) {
-            return redirect()->to('/login');
+            return redirect()->to('/');
         }
     }
 

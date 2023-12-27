@@ -9,3 +9,5 @@ Microsoft.EntityFrameworkCore.Design
 Pomelo.EntityFrameworkCore.Mysql
 MicroMicrosoft.EntityFramework.sql Server
 MySql.Data
+
+kode warna: F9D77C (yellow)

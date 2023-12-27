@@ -12,7 +12,7 @@ class SudahLogin implements FilterInterface
     {
         // Do something here
         if(session()->get('group_id')) {
-            return redirect()->to('/');
+            return redirect()->to('/dashboard');
         }
     }
 

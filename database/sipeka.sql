@@ -544,10 +544,10 @@ INSERT INTO `siswa` VALUES (1, 'Aiswa1', 'p');
 INSERT INTO `siswa` VALUES (2, 'Siswa2', 'p');
 
 -- ----------------------------
--- Table structure for trx_hasil_tes_kepribadian
+-- Table structure for trx_tes_kepribadian_hasil
 -- ----------------------------
-DROP TABLE IF EXISTS `trx_hasil_tes_kepribadian`;
-CREATE TABLE `trx_hasil_tes_kepribadian`  (
+DROP TABLE IF EXISTS `trx_tes_kepribadian_hasil`;
+CREATE TABLE `trx_tes_kepribadian_hasil`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `uname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `count_jawaban` int NULL DEFAULT NULL,
@@ -557,9 +557,9 @@ CREATE TABLE `trx_hasil_tes_kepribadian`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of trx_hasil_tes_kepribadian
+-- Records of trx_tes_kepribadian_hasil
 -- ----------------------------
-INSERT INTO `trx_hasil_tes_kepribadian` VALUES (2, 'admin', 18, 'A', 'Sanguinis');
+INSERT INTO `trx_tes_kepribadian_hasil` VALUES (2, 'admin', 18, 'A', 'Sanguinis');
 
 -- ----------------------------
 -- Table structure for trx_tes_kepribadian

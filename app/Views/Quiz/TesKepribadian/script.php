@@ -1,8 +1,13 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script>
-    $(document).ready(function () {
-        
+     $(document).ready(function () {
+        $('#petunjukTesKepribadianModals').modal('show');
     });
 
+    function nextPage(){
+        $('html, body').scrollTop(0);
+    }
 
     function saveTesKepribadian() {
         var formKelemahan = $('#formTKepKelemahan').serialize();

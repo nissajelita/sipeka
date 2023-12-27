@@ -6,12 +6,14 @@ use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class IsAdmin implements FilterInterface
+class IsSiswa implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (session()->has('group_id') && session()->get('group_id') != 2) {
-            return redirect()->to('/dashboard');
+        if (session()->has('group_id') && session()->get('group_id') != 1) {
+            return redirect()->to('/dasboard');
+        } else {
+            return redirect()->to('/expired');
         }
 
         return $request;

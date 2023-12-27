@@ -69,25 +69,39 @@ class M_Master extends Model
         return $query ? true : false;
     }
 
-    // BEGIN : Get hasil tes
-    public function get_hasil_tes_kepribadian($param)
+    public function get_all_tes_talenta()
     {
-        $query = $this->db->query("SELECT * from trx_hasil_tes_kepribadian where tes_id = ?", [$param]);
+        $query = $this->db->query("SELECT * FROM mst_talenta_tes");
         return $query;
     }
-    public function get_count_hasil_tes_kepribadian_by_uname($param)
+    public function get_tes_talenta_by_id_kategoti($param)
     {
-        $query = $this->db->query("SELECT kategori, kepribadian, COUNT(jawaban) AS counting
-        FROM trx_tes_kepribadian a 
-        JOIN mst_kp_hasil b ON b.kategori = a.jawaban WHERE uname = ?
-        GROUP BY kategori, kepribadian ORDER BY counting desc limit 1", [$param]);
+        $query = $this->db->query("SELECT * FROM mst_talenta_tes WHERE id_kategori = ?", $param);
         return $query;
     }
-    public function post_save_hasil_tes_kepribadian($data)
+    public function get_count_jlh_tes_talenta()
     {
-        $query = $this->db->table('trx_hasil_tes_kepribadian')->insert($data);
-        return $query ? true : false;
+        $query = $this->db->query("SELECT COUNT(*) AS count_per_id FROM mst_talenta_tes");
+        return $query;
     }
-    // END : Get hasil tes
+    
+    // START : NILAI RAPOR
+    public function get_all_kategori_mapel()
+    {
+        $query = $this->db->query("SELECT * FROM mst_mapel_kategori");
+        return $query;
+    }
+    public function get_all_mapel()
+    {
+        $query = $this->db->query("SELECT * FROM mst_mapel a JOIN mst_mapel_kategori b ON a.kategori_mapel_id = b.id_kategori_mapel order by id_kategori_mapel");
+        return $query;
+    }
+    public function get_mapel_by_kategori($param)
+    {
+        $query = $this->db->query("SELECT * FROM mst_mapel where kategori_mapel_id = ?", $param);
+        return $query;
+    }
+    // END : NILAI RAPOR
+
 
 }

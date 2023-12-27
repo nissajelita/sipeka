@@ -6,6 +6,7 @@ use App\Filters\AuthFilter;
 use App\Filters\BelumLogin;
 use App\Filters\SudahLogin;
 use App\Filters\IsAdmin;
+use App\Filters\IsSiswa;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -31,7 +32,8 @@ class Filters extends BaseConfig
         'belumLogin'    => BelumLogin::class,
         'sudahLogin'    => SudahLogin::class,
         'sudahLogin'    => SudahLogin::class,
-        'isAdmin'       => IsAdmin::class
+        'isAdmin'       => IsAdmin::class,
+        'isSiswa'       => IsSiswa::class
     ];
 
     /**

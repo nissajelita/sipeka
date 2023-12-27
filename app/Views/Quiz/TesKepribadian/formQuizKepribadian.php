@@ -51,7 +51,7 @@
                         <span class="align-middle d-sm-inline-block d-none">Previous</span>
                     </button>
                     <button class="btn btn-primary btn-next">
-                        <span class="align-middle d-sm-inline-block d-none">Next</span>
+                        <span class="align-middle d-sm-inline-block d-none" onclick="nextPage()">Next</span>
                         <i data-feather="arrow-right" class="align-middle ms-sm-25 ms-0"></i>
                     </button>
                 </div>
