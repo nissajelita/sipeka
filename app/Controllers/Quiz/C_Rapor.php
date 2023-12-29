@@ -24,12 +24,23 @@ class C_Rapor extends BaseController
             $mapel = $this->masterTesModel->get_all_mapel()->getResultArray();
             // dd($mapel);
             foreach ($mapel as $key => $value) {
-                $data[] = array(
+                $data_smt1[] = array(
                     'uname'            => $_SESSION['uname'],
                     'id_mapel'         => $value['id_mapel'],
-                    'nilai'            => $this->request->getVar($value['id_mapel'])
+                    'nilai'            => $this->request->getVar($value['id_mapel'] . "_smt1"),
+                    'smt'              => 1
                 );
             }
+            foreach ($mapel as $key => $value) {
+                $data_smt2[] = array(
+                    'uname'            => $_SESSION['uname'],
+                    'id_mapel'         => $value['id_mapel'],
+                    'nilai'            => $this->request->getVar($value['id_mapel'] . "_smt2"),
+                    'smt'              => 2
+                );
+            }
+            $data = array_merge($data_smt1, $data_smt2);
+            // dd($data);
 
             $saveRapor = $this->raporModel->post_save_nilai_rapor($data);
 

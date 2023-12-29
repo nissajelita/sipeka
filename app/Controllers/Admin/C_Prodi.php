@@ -5,7 +5,7 @@ namespace App\Controllers\Admin;
 use App\Models\M_Master;
 use App\Controllers\BaseController;
 
-class C_universitas extends BaseController
+class C_Prodi extends BaseController
 {
     public function __construct()
     {
@@ -20,7 +20,7 @@ class C_universitas extends BaseController
         $data['prodi']    = $result;
         $data['univ']     = $this->masterTesModel->get_all_universitas()->getResultArray();
         $data['fakultas'] = $this->masterTesModel->get_all_fakultas()->getResultArray();
-        return view("Admin\Master\Universitas\index", $data);
+        return view("Admin\Master\Prodi\index", $data);
     }
 
     public function simpan()

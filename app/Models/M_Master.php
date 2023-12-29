@@ -14,7 +14,7 @@ class M_Master extends Model
     public function get_all_prodi()
     {
         $query = $this->db->query("SELECT * FROM mst_univ_jurusan
-        LEFT JOIN mst_univ_fakultas ON mst_univ_fakultas.id_fakultas = mst_univ_jurusan.fakultas_id");
+        LEFT JOIN mst_univ_fakultas ON mst_univ_fakultas.id_fakultas = mst_univ_jurusan.fakultas_id WHERE univ_kd = 'UNIB' and deleted_status is not true");
         return $query;
     }
     public function get_all_universitas()
@@ -57,6 +57,11 @@ class M_Master extends Model
         $query = $this->db->query("SELECT * FROM mst_kp_hasil ");
         return $query;
     }
+    public function get_kp_hasil_by_id($param)
+    {
+        $query = $this->db->query("SELECT * FROM mst_kp_hasil where id_kp_result = ?", $param);
+        return $query;
+    }
     public function get_count_jlh_tes_kepribadian()
     {
         $query = $this->db->query("SELECT COUNT(*) AS count_per_id FROM mst_kp_tes GROUP BY id_kp");
@@ -69,6 +74,7 @@ class M_Master extends Model
         return $query ? true : false;
     }
 
+    // START : TALENTA
     public function get_all_tes_talenta()
     {
         $query = $this->db->query("SELECT * FROM mst_talenta_tes");
@@ -84,6 +90,19 @@ class M_Master extends Model
         $query = $this->db->query("SELECT COUNT(*) AS count_per_id FROM mst_talenta_tes");
         return $query;
     }
+
+    public function get_all_talenta_hasil()
+    {
+        $query = $this->db->query("SELECT * FROM mst_talenta_hasil ");
+        return $query;
+    }
+    public function get_talenta_hasil_by_id($param)
+    {
+        $query = $this->db->query("SELECT * FROM mst_talenta_hasil WHERE id_hasil_talenta = ?", $param);
+        return $query;
+    }
+
+    // END : TALENTA
     
     // START : NILAI RAPOR
     public function get_all_kategori_mapel()

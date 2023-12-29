@@ -105,11 +105,17 @@
                     <ul class="menu-content">
                         <li><a class="d-flex align-items-center" href="<?=base_url('/user')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Collapsed Menu">User</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="<?=base_url('/universitas')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Layout Full">Universitas</span></a>
+                        <li><a class="d-flex align-items-center" href="<?=base_url('/prodi')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Layout Full">Program Studi</span></a>
                         </li>
                         <li><a class="d-flex align-items-center" href="<?=base_url('/tes-kepribadian')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Without Menu">Tes Kepribadian</span></a>
                         </li>
                         <li><a class="d-flex align-items-center" href="<?=base_url('/tes-talenta')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Without Menu">Tes Talenta</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather='layers'></i><span class="menu-title text-truncate" data-i18n="Page Layouts">Data Mapping</span></a>
+                    <ul class="menu-content">
+                        <li><a class="d-flex align-items-center" href="<?=base_url('/prodi-hasil-tes')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Collapsed Menu">Prodi - Hasil Tes</span></a>
                         </li>
                     </ul>
                 </li>

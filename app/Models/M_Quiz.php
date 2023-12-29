@@ -63,9 +63,41 @@ class M_Quiz extends Model
     }
     public function get_trx_nilai_rapor_by_uname($param)
     {
-        $query = $this->db->query("SELECT * FROM trx_nilai_rapor WHERE uname = ? and deleted_status is not true limit 1", [$param]);
+        $query = $this->db->query("SELECT * FROM trx_nilai_rapor WHERE uname = ? and deleted_status is not true", [$param]);
         return $query;
     }
+
+
+    // START : PERANGKINGAN JURUSAN
+    public function get_prodi_hasil_kp($param)
+    {
+        $query = $this->db->query("SELECT a.*, b.nama_jurusan FROM mp_jurusan_intelligence a JOIN mst_univ_jurusan b on a.jurusan_id = b.id WHERE intelligence_kategori = 1 AND intelligence_id = ? ORDER BY id;", [$param]);
+        return $query;
+    }
+    public function get_prodi_hasil_talenta($param1, $param2)
+    {
+        $query = $this->db->query("SELECT a.*, b.nama_jurusan FROM mp_jurusan_intelligence a JOIN mst_univ_jurusan b on a.jurusan_id = b.id WHERE intelligence_kategori = 2 AND intelligence_id = ? AND a.jurusan_id NOT IN (SELECT jurusan_id FROM mp_jurusan_intelligence WHERE intelligence_kategori = 1 AND intelligence_id = ?) ORDER BY id;", [$param1, $param2]);
+        return $query;
+    }
+
+    public function get_average_nilai_rapor_by_kategori_mapel($param)
+    {
+        $query = $this->db->query("SELECT b.kategori_mapel_id, AVG(a.nilai) as rata_nilai FROM trx_nilai_rapor a JOIN mst_mapel b ON a.id_mapel = b.id_mapel WHERE uname = ? GROUP BY b.kategori_mapel_id;", [$param]);
+        return $query;
+    }
+    public function get_mapping_jurusan_mapel_by_jurusan_kriteria_mapel_nilai($param1, $param2, $param3, $param4)
+    {
+        $query = $this->db->query("SELECT * FROM mp_jurusan_mapel WHERE jurusan_id = ? and (? >= range_awal and ? <= range_akhir and mapel_kategori_id = ?);", [$param1, $param2, $param3, $param4]);
+        return $query;
+    }
+
+
+    // public function get_trx_all_nilai_rapor_by_uname($param)
+    // {
+    //     $query = $this->db->query("SELECT * FROM trx_nilai_rapor WHERE uname = ? and deleted_status is not true", [$param]);
+    //     return $query;
+    // }
+    // END : PERANGKINGAN JURUSAN
 
 
 }

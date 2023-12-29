@@ -34,8 +34,15 @@ $routes->add('/register/process', 'Auth::registerProcess');
 $routes->add('user', 'Admin\C_User::index', ['filter' => 'isAdmin']);
 $routes->add('user/simpan', 'Admin\C_User::simpan', ['filter' => 'belumLogin']);
 $routes->add('user/edituser', 'Admin\C_User::editUser', ['filter' => 'belumLogin']);
-$routes->add('universitas', 'Admin\C_universitas::index', ['filter' => 'isAdmin']);
+$routes->add('prodi', 'Admin\C_Prodi::index', ['filter' => 'isAdmin']);
 $routes->add('universitas/simpan', 'Admin\C_universitas::simpan', ['filter' => 'isAdmin']);
+
+
+// ADMIN MAPPING
+$routes->add('prodi-hasil-tes', 'Admin\C_Mapping::index', ['filter' => 'isAdmin']);
+$routes->add('prodi-hasil-tes/table', 'Admin\C_Mapping::table', ['filter' => 'isAdmin']);
+$routes->add('prodi-hasil-tes/edit', 'Admin\C_Mapping::edit', ['filter' => 'isAdmin']);
+
 
 
 //ADMIN MST QUIZ

@@ -12,7 +12,11 @@
                         <?php foreach ($mapel as $key => $r) { ?>
                             <div class="col-md-6 mb-1">
                                 <label class="form-label fw-bolder small" for="bahasaInggris"><?= $r['nama_mapel'] ?> <code><?= '(' . $r['nama_kategori'] . ')' ?></code></label>
-                                <input type="number" id="<?= $r['nama_mapel'] ?>" class="form-control form-control-sm form-nilai-rapor" name="<?= $r['id_mapel'] ?>" placeholder="<?= $r['nama_mapel'] ?>">
+                                <div class="input-group">
+                                    <input type="number" id="<?= $r['nama_mapel'] . '_smt1' ?>" class="form-control form-control-sm form-nilai-rapor" name="<?= $r['id_mapel'] . '_smt1' ?>" placeholder="Smt 1">
+                                    <input type="number" id="<?= $r['nama_mapel'] . '_smt2' ?>" class="form-control form-control-sm form-nilai-rapor" name="<?= $r['id_mapel'] . '_smt2'?>" placeholder="Smt 2">
+                                </div>
+                                
                             </div>
                             <?php
                                 $count++;

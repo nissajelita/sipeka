@@ -27,7 +27,7 @@ class C_Quiz extends BaseController
         if ((!empty($tes_talenta) || !empty($tes_kp)) && !empty($rapor)) {
             return redirect()->to('/hasil-tes');
         } elseif (!empty($tes_kp) && !empty($tes_talenta) && empty($rapor)) {
-            dd('jump to pengisian rapor');
+            return redirect()->to('/hasil-tes');
         } elseif (empty($tes_kp)) {
             return redirect()->to('/quiz-kepribadian');
         } else {

@@ -7,10 +7,10 @@
 <div class="card">
     <div class="card-header">
         <div class="col-lg-10">
-            <h4 class="card-title">Data Universitas</h4>
+            <h4 class="card-title">Data Program Studi Universitas Bengkulu</h4>
         </div>
         <div class="col-lg-2">
-            <button type="button" class="btn btn-outline-primary waves-effect" data-bs-toggle="modal" data-bs-target="#tambahUniversitas">Tambah Universitas</button>
+            <button type="button" class="btn btn-outline-primary waves-effect" data-bs-toggle="modal" data-bs-target="#tambahUniversitas">Tambah Prodi</button>
         </div>
     </div>
     <div class="card-body">
