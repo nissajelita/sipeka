@@ -87,7 +87,7 @@ class M_Quiz extends Model
     }
     public function get_mapping_jurusan_mapel_by_jurusan_kriteria_mapel_nilai($param1, $param2, $param3, $param4)
     {
-        $query = $this->db->query("SELECT * FROM mp_jurusan_mapel WHERE jurusan_id = ? and (? >= range_awal and ? <= range_akhir and mapel_kategori_id = ?);", [$param1, $param2, $param3, $param4]);
+        $query = $this->db->query("SELECT * FROM mp_jurusan_mapel WHERE jurusan_id = ? and (? >= range_awal and ? < range_akhir and mapel_kategori_id = ?);", [$param1, $param2, $param3, $param4]);
         return $query;
     }
 
