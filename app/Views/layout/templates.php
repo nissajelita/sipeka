@@ -109,7 +109,7 @@
                         </li>
                         <li><a class="d-flex align-items-center" href="<?=base_url('/tes-kepribadian')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Without Menu">Tes Kepribadian</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="<?=base_url('/tes-talenta')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Without Menu">Tes Talenta</span></a>
+                        <li><a class="d-flex align-items-center" href="<?=base_url('/tes-talenta')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Without Menu">Tes Kecerdasan Majemuk</span></a>
                         </li>
                     </ul>
                 </li>
@@ -124,7 +124,7 @@
                     <ul class="menu-content">
                         <li><a class="d-flex align-items-center" href="<?=base_url('/quiz-kepribadian')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Collapsed Menu">Tes Kepribadian</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="<?=base_url('/quiz-talenta')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Collapsed Menu">Tes Talenta</span></a>
+                        <li><a class="d-flex align-items-center" href="<?=base_url('/quiz-talenta')?>"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Collapsed Menu">Tes Kecerdasan Majemuk</span></a>
                         </li>
                     </ul>
                 </li>

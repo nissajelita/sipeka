@@ -71,12 +71,12 @@ class M_Quiz extends Model
     // START : PERANGKINGAN JURUSAN
     public function get_prodi_hasil_kp($param)
     {
-        $query = $this->db->query("SELECT a.*, b.nama_jurusan FROM mp_jurusan_intelligence a JOIN mst_univ_jurusan b on a.jurusan_id = b.id WHERE intelligence_kategori = 1 AND intelligence_id = ? ORDER BY id;", [$param]);
+        $query = $this->db->query("SELECT a.*, b.nama_jurusan FROM mp_jurusan_intelligence a JOIN mst_univ_jurusan b on a.jurusan_id = b.id WHERE intelligence_kategori = 1 AND intelligence_id = ? ORDER BY a.prioritas and b.deleted_status is null;", [$param]);
         return $query;
     }
     public function get_prodi_hasil_talenta($param1, $param2)
     {
-        $query = $this->db->query("SELECT a.*, b.nama_jurusan FROM mp_jurusan_intelligence a JOIN mst_univ_jurusan b on a.jurusan_id = b.id WHERE intelligence_kategori = 2 AND intelligence_id = ? AND a.jurusan_id NOT IN (SELECT jurusan_id FROM mp_jurusan_intelligence WHERE intelligence_kategori = 1 AND intelligence_id = ?) ORDER BY id;", [$param1, $param2]);
+        $query = $this->db->query("SELECT a.*, b.nama_jurusan FROM mp_jurusan_intelligence a JOIN mst_univ_jurusan b on a.jurusan_id = b.id WHERE b.deleted_status is null and intelligence_kategori = 2 AND intelligence_id = ? AND a.jurusan_id NOT IN (SELECT jurusan_id FROM mp_jurusan_intelligence WHERE intelligence_kategori = 1 AND intelligence_id = ?) ORDER BY a.prioritas;", [$param1, $param2]);
         return $query;
     }
 

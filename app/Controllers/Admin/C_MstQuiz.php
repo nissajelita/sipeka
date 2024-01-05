@@ -40,7 +40,7 @@ class C_MstQuiz extends BaseController
     public function indexTalenta()
     {
         $data['title']     = 'Data Master';
-        $data['subtitle']  = 'Tes Talenta';
+        $data['subtitle']  = 'Tes Kecerdasan Majemuk';
         $data['talenta']    = $this->masterTesModel->get_all_tes_talenta()->getResultArray();
         // dd($data);
 

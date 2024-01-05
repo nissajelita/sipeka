@@ -68,7 +68,7 @@ class Auth extends BaseController
         $uname         = $this->request->getPost('uname');
         $user_pwd      = $this->request->getPost('user_pwd');
 
-        $data_user = $this->userModel->get_data_user_by_username($uname)->getRowArray();
+        $data_user = $this->userModel->get_data_user_login_by_username($uname)->getRowArray();
         // dd($uname);
         try {
             if (empty($data_user)) {

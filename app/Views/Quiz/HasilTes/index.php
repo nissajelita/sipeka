@@ -44,7 +44,7 @@
     <div class="card-footer">
         <?php if(empty($tes_talenta)) { ?>
         <div class="d-grid mb-1">
-            <a type="button" class="btn btn-primary waves-effect waves-float waves-light" href="<?= base_url('/quiz-talenta') ?>">Lanjut ke Tes Talenta</a>
+            <a type="button" class="btn btn-primary waves-effect waves-float waves-light" href="<?= base_url('/quiz-talenta') ?>">Lanjut ke Tes Kecerdasan Majemuk</a>
         </div>
         <?php } if(empty($tes_kp)) { ?>
         <div class="d-grid mb-1">
@@ -55,13 +55,30 @@
                 <p class="card-text m-auto w-75">
                   <strong class ="text-warning"><?= $_SESSION['nm_user'] ?></strong>, Berikut adalah urutan <strong>Jurusan Kuliah di Universitas Bengkulu </strong>yang yang cocok berdasarkan tipe kepribadian dan kecerdasan paling dominan dalam diri kamu:
                 </p>
-                <div class="row text-center m-3">
-                    <?php $no = 3;
+                <div class="row text-left m-3">
+                    <table class="table-bordered tbl-sm">
+                        <thead>
+                            <tr>
+                                <th>Ranking</th>
+                                <th>Nama Jurusan</th>
+                                <th>Leaving Flow</th>
+                                <th>Entering Flow</th>
+                                <th>Net Flow</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $no = 1;
             foreach($ranking as $r) { ?>
-                        <div class="row text-center m-0">
-                        <code class="mb-0 display-<?=$no++ ?>"><?= $r['nama_jurusan'] ?></code>
-                    </div>
-                    <?php } ?>
+                                <tr>
+                                    <td><?= $no++ ?></td>
+                                    <td><h4><code class="mb-0"><?= $r['nama_jurusan'] ?></code></h4></td>
+                                    <td><?= $r['leaving_flow'] ?></td>
+                                    <td><?= $r['entering_flow'] ?></td>
+                                    <td><?= $r['net_flow'] ?></td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
            

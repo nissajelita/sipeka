@@ -10,7 +10,7 @@
             <h4 class="card-title">Data Program Studi Universitas Bengkulu</h4>
         </div>
         <div class="col-lg-2">
-            <button type="button" class="btn btn-outline-primary waves-effect" data-bs-toggle="modal" data-bs-target="#tambahUniversitas">Tambah Prodi</button>
+            <button type="button" class="btn btn-outline-primary waves-effect" data-bs-toggle="modal" data-bs-target="#tambahProdi">Tambah Prodi</button>
         </div>
     </div>
     <div class="card-body">
@@ -38,8 +38,8 @@ foreach ($prodi as $key => $p) { ?>
                             <td><?= $p['nama_fakultas'] ?></td>
                             <td><?= $p['jenjang'] ?></td>
                             <td>
-                            <button class="btn btn-sm btn-warning mb-1" onclick="btnEditUser('<?=$p['id']?>')"><i data-feather='edit'></i></button>
-                            <button class="btn btn-sm btn-danger" onclick="btnDeleteUser()"><i data-feather='trash'></i></button>
+                            <button class="btn btn-sm btn-warning mb-1" onclick="btnEdit('<?=$p['id']?>')"><i data-feather='edit'></i></button>
+                            <button class="btn btn-sm btn-danger mb-1" onclick="btnDelete('<?=$p['id']?>')"><i data-feather='trash'></i></button>
                             </td>
                         </tr>
                     <?php } ?>
@@ -49,6 +49,7 @@ foreach ($prodi as $key => $p) { ?>
         </div>
     </div>
 </div>
-<?php include __DIR__ . '/modals/tambahUniv.php'; ?>
-<?php include __DIR__ . '/script/scriptUniv.php'; ?>
+<?php include __DIR__ . '/modals/tambahProdi.php'; ?>
+<?php include __DIR__ . '/modals/editProdi.php'; ?>
+<?php include __DIR__ . '/script/scriptProdi.php'; ?>
 <?= $this->endSection() ?>

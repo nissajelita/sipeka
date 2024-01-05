@@ -46,7 +46,7 @@ foreach ($user as $key => $usr) { ?>
                                         </td>
                                         <td>
                                         <button class="btn btn-sm btn-warning" onclick="btnEditUser('<?=$usr['uname']?>')"><i data-feather='edit'></i></button>
-                                        <button class="btn btn-sm btn-danger" onclick="btnDeleteUser()"><i data-feather='trash'></i></button>
+                                        <button class="btn btn-sm btn-danger" onclick="btnDeleteUser('<?=$usr['id_user']?>')"><i data-feather='trash'></i></button>
                                         </td>
                                     </tr>
                                 <?php } ?>

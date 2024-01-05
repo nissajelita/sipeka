@@ -17,7 +17,7 @@
                         <span>Jurusan kuliah terbatas di Universitas Bengkulu</span>
                     </li>
                     <li class="list-group-item">
-                        <span>Memuat tes kepribadian dan tes talenta</span>
+                        <span>Memuat tes kepribadian dan tes kecerdasan majemuk</span>
                     </li>
                 </ul>
             </div>

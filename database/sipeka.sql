@@ -11,7 +11,7 @@
  Target Server Version : 80034 (8.0.34)
  File Encoding         : 65001
 
- Date: 30/12/2023 22:35:34
+ Date: 05/01/2024 23:24:15
 */
 
 SET NAMES utf8mb4;
@@ -26,119 +26,123 @@ CREATE TABLE `mp_jurusan_intelligence`  (
   `intelligence_id` int NULL DEFAULT NULL,
   `intelligence_kategori` int NULL DEFAULT NULL,
   `jurusan_id` int NULL DEFAULT NULL,
+  `prioritas` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `jurusan_id`(`jurusan_id` ASC) USING BTREE,
   CONSTRAINT `jurusan_id` FOREIGN KEY (`jurusan_id`) REFERENCES `mst_univ_jurusan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 106 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 109 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of mp_jurusan_intelligence
 -- ----------------------------
-INSERT INTO `mp_jurusan_intelligence` VALUES (1, 1, 1, 15);
-INSERT INTO `mp_jurusan_intelligence` VALUES (2, 1, 1, 25);
-INSERT INTO `mp_jurusan_intelligence` VALUES (3, 1, 1, 27);
-INSERT INTO `mp_jurusan_intelligence` VALUES (4, 1, 1, 19);
-INSERT INTO `mp_jurusan_intelligence` VALUES (5, 2, 1, 29);
-INSERT INTO `mp_jurusan_intelligence` VALUES (6, 2, 1, 48);
-INSERT INTO `mp_jurusan_intelligence` VALUES (7, 2, 1, 47);
-INSERT INTO `mp_jurusan_intelligence` VALUES (8, 2, 1, 38);
-INSERT INTO `mp_jurusan_intelligence` VALUES (9, 2, 1, 54);
-INSERT INTO `mp_jurusan_intelligence` VALUES (10, 2, 1, 11);
-INSERT INTO `mp_jurusan_intelligence` VALUES (11, 3, 1, 17);
-INSERT INTO `mp_jurusan_intelligence` VALUES (12, 3, 1, 18);
-INSERT INTO `mp_jurusan_intelligence` VALUES (13, 3, 1, 15);
-INSERT INTO `mp_jurusan_intelligence` VALUES (14, 3, 1, 19);
-INSERT INTO `mp_jurusan_intelligence` VALUES (15, 3, 1, 5);
-INSERT INTO `mp_jurusan_intelligence` VALUES (16, 3, 1, 42);
-INSERT INTO `mp_jurusan_intelligence` VALUES (17, 3, 1, 6);
-INSERT INTO `mp_jurusan_intelligence` VALUES (18, 3, 1, 12);
-INSERT INTO `mp_jurusan_intelligence` VALUES (19, 3, 1, 10);
-INSERT INTO `mp_jurusan_intelligence` VALUES (20, 3, 1, 11);
-INSERT INTO `mp_jurusan_intelligence` VALUES (21, 3, 1, 51);
-INSERT INTO `mp_jurusan_intelligence` VALUES (22, 3, 1, 49);
-INSERT INTO `mp_jurusan_intelligence` VALUES (23, 4, 1, 22);
-INSERT INTO `mp_jurusan_intelligence` VALUES (24, 4, 1, 23);
-INSERT INTO `mp_jurusan_intelligence` VALUES (25, 4, 1, 26);
-INSERT INTO `mp_jurusan_intelligence` VALUES (26, 1, 2, 8);
-INSERT INTO `mp_jurusan_intelligence` VALUES (27, 1, 2, 12);
-INSERT INTO `mp_jurusan_intelligence` VALUES (28, 1, 2, 5);
-INSERT INTO `mp_jurusan_intelligence` VALUES (29, 1, 2, 3);
-INSERT INTO `mp_jurusan_intelligence` VALUES (30, 1, 2, 4);
-INSERT INTO `mp_jurusan_intelligence` VALUES (31, 1, 2, 2);
-INSERT INTO `mp_jurusan_intelligence` VALUES (32, 1, 2, 7);
-INSERT INTO `mp_jurusan_intelligence` VALUES (33, 1, 2, 13);
-INSERT INTO `mp_jurusan_intelligence` VALUES (34, 1, 2, 6);
-INSERT INTO `mp_jurusan_intelligence` VALUES (35, 1, 2, 10);
-INSERT INTO `mp_jurusan_intelligence` VALUES (36, 1, 2, 11);
-INSERT INTO `mp_jurusan_intelligence` VALUES (37, 1, 2, 27);
-INSERT INTO `mp_jurusan_intelligence` VALUES (38, 1, 2, 15);
-INSERT INTO `mp_jurusan_intelligence` VALUES (39, 2, 2, 48);
-INSERT INTO `mp_jurusan_intelligence` VALUES (40, 2, 2, 17);
-INSERT INTO `mp_jurusan_intelligence` VALUES (41, 2, 2, 47);
-INSERT INTO `mp_jurusan_intelligence` VALUES (42, 2, 2, 31);
-INSERT INTO `mp_jurusan_intelligence` VALUES (43, 2, 2, 51);
-INSERT INTO `mp_jurusan_intelligence` VALUES (44, 2, 2, 24);
-INSERT INTO `mp_jurusan_intelligence` VALUES (45, 2, 2, 40);
-INSERT INTO `mp_jurusan_intelligence` VALUES (46, 2, 2, 19);
-INSERT INTO `mp_jurusan_intelligence` VALUES (47, 2, 2, 5);
-INSERT INTO `mp_jurusan_intelligence` VALUES (48, 2, 2, 6);
-INSERT INTO `mp_jurusan_intelligence` VALUES (49, 2, 2, 12);
-INSERT INTO `mp_jurusan_intelligence` VALUES (50, 2, 2, 10);
-INSERT INTO `mp_jurusan_intelligence` VALUES (51, 2, 2, 42);
-INSERT INTO `mp_jurusan_intelligence` VALUES (52, 2, 2, 6);
-INSERT INTO `mp_jurusan_intelligence` VALUES (53, 2, 2, 12);
-INSERT INTO `mp_jurusan_intelligence` VALUES (54, 2, 2, 10);
-INSERT INTO `mp_jurusan_intelligence` VALUES (55, 2, 2, 11);
-INSERT INTO `mp_jurusan_intelligence` VALUES (56, 2, 2, 43);
-INSERT INTO `mp_jurusan_intelligence` VALUES (57, 2, 2, 45);
-INSERT INTO `mp_jurusan_intelligence` VALUES (58, 2, 2, 50);
-INSERT INTO `mp_jurusan_intelligence` VALUES (59, 2, 2, 52);
-INSERT INTO `mp_jurusan_intelligence` VALUES (60, 2, 2, 53);
-INSERT INTO `mp_jurusan_intelligence` VALUES (61, 2, 2, 49);
-INSERT INTO `mp_jurusan_intelligence` VALUES (62, 3, 2, 48);
-INSERT INTO `mp_jurusan_intelligence` VALUES (63, 3, 2, 31);
-INSERT INTO `mp_jurusan_intelligence` VALUES (64, 3, 2, 53);
-INSERT INTO `mp_jurusan_intelligence` VALUES (65, 4, 2, 54);
-INSERT INTO `mp_jurusan_intelligence` VALUES (66, 4, 2, 9);
-INSERT INTO `mp_jurusan_intelligence` VALUES (67, 6, 2, 3);
-INSERT INTO `mp_jurusan_intelligence` VALUES (68, 6, 2, 4);
-INSERT INTO `mp_jurusan_intelligence` VALUES (69, 6, 2, 5);
-INSERT INTO `mp_jurusan_intelligence` VALUES (70, 6, 2, 13);
-INSERT INTO `mp_jurusan_intelligence` VALUES (71, 6, 2, 7);
-INSERT INTO `mp_jurusan_intelligence` VALUES (72, 6, 2, 8);
-INSERT INTO `mp_jurusan_intelligence` VALUES (73, 6, 2, 2);
-INSERT INTO `mp_jurusan_intelligence` VALUES (74, 6, 2, 7);
-INSERT INTO `mp_jurusan_intelligence` VALUES (75, 6, 2, 6);
-INSERT INTO `mp_jurusan_intelligence` VALUES (76, 6, 2, 10);
-INSERT INTO `mp_jurusan_intelligence` VALUES (77, 6, 2, 11);
-INSERT INTO `mp_jurusan_intelligence` VALUES (78, 6, 2, 27);
-INSERT INTO `mp_jurusan_intelligence` VALUES (79, 6, 2, 15);
-INSERT INTO `mp_jurusan_intelligence` VALUES (80, 6, 2, 38);
-INSERT INTO `mp_jurusan_intelligence` VALUES (81, 6, 2, 39);
-INSERT INTO `mp_jurusan_intelligence` VALUES (82, 6, 2, 24);
-INSERT INTO `mp_jurusan_intelligence` VALUES (83, 7, 2, 2);
-INSERT INTO `mp_jurusan_intelligence` VALUES (84, 7, 2, 47);
-INSERT INTO `mp_jurusan_intelligence` VALUES (85, 7, 2, 31);
-INSERT INTO `mp_jurusan_intelligence` VALUES (86, 7, 2, 24);
-INSERT INTO `mp_jurusan_intelligence` VALUES (87, 7, 2, 3);
-INSERT INTO `mp_jurusan_intelligence` VALUES (88, 7, 2, 4);
-INSERT INTO `mp_jurusan_intelligence` VALUES (89, 7, 2, 5);
-INSERT INTO `mp_jurusan_intelligence` VALUES (90, 7, 2, 6);
-INSERT INTO `mp_jurusan_intelligence` VALUES (91, 7, 2, 7);
-INSERT INTO `mp_jurusan_intelligence` VALUES (92, 7, 2, 8);
-INSERT INTO `mp_jurusan_intelligence` VALUES (93, 7, 2, 10);
-INSERT INTO `mp_jurusan_intelligence` VALUES (94, 7, 2, 11);
-INSERT INTO `mp_jurusan_intelligence` VALUES (95, 7, 2, 12);
-INSERT INTO `mp_jurusan_intelligence` VALUES (96, 7, 2, 13);
-INSERT INTO `mp_jurusan_intelligence` VALUES (97, 7, 2, 15);
-INSERT INTO `mp_jurusan_intelligence` VALUES (98, 8, 2, 29);
-INSERT INTO `mp_jurusan_intelligence` VALUES (99, 8, 2, 30);
-INSERT INTO `mp_jurusan_intelligence` VALUES (100, 8, 2, 31);
-INSERT INTO `mp_jurusan_intelligence` VALUES (101, 8, 2, 32);
-INSERT INTO `mp_jurusan_intelligence` VALUES (102, 8, 2, 33);
-INSERT INTO `mp_jurusan_intelligence` VALUES (103, 8, 2, 24);
-INSERT INTO `mp_jurusan_intelligence` VALUES (104, 8, 2, 34);
-INSERT INTO `mp_jurusan_intelligence` VALUES (105, 8, 2, 35);
+INSERT INTO `mp_jurusan_intelligence` VALUES (1, 1, 1, 15, 1);
+INSERT INTO `mp_jurusan_intelligence` VALUES (2, 1, 1, 25, 2);
+INSERT INTO `mp_jurusan_intelligence` VALUES (3, 1, 1, 27, 3);
+INSERT INTO `mp_jurusan_intelligence` VALUES (4, 1, 1, 19, 4);
+INSERT INTO `mp_jurusan_intelligence` VALUES (5, 2, 1, 29, 1);
+INSERT INTO `mp_jurusan_intelligence` VALUES (6, 2, 1, 48, 2);
+INSERT INTO `mp_jurusan_intelligence` VALUES (7, 2, 1, 47, 3);
+INSERT INTO `mp_jurusan_intelligence` VALUES (8, 2, 1, 38, 4);
+INSERT INTO `mp_jurusan_intelligence` VALUES (9, 2, 1, 54, 5);
+INSERT INTO `mp_jurusan_intelligence` VALUES (10, 2, 1, 11, 6);
+INSERT INTO `mp_jurusan_intelligence` VALUES (11, 3, 1, 17, 1);
+INSERT INTO `mp_jurusan_intelligence` VALUES (12, 3, 1, 18, 2);
+INSERT INTO `mp_jurusan_intelligence` VALUES (13, 3, 1, 15, 3);
+INSERT INTO `mp_jurusan_intelligence` VALUES (14, 3, 1, 19, 4);
+INSERT INTO `mp_jurusan_intelligence` VALUES (15, 3, 1, 5, 5);
+INSERT INTO `mp_jurusan_intelligence` VALUES (16, 3, 1, 41, 6);
+INSERT INTO `mp_jurusan_intelligence` VALUES (17, 3, 1, 6, 7);
+INSERT INTO `mp_jurusan_intelligence` VALUES (18, 3, 1, 42, 8);
+INSERT INTO `mp_jurusan_intelligence` VALUES (19, 3, 1, 10, 9);
+INSERT INTO `mp_jurusan_intelligence` VALUES (20, 3, 1, 43, 10);
+INSERT INTO `mp_jurusan_intelligence` VALUES (21, 3, 1, 51, 11);
+INSERT INTO `mp_jurusan_intelligence` VALUES (22, 3, 1, 49, 12);
+INSERT INTO `mp_jurusan_intelligence` VALUES (23, 4, 1, 22, 1);
+INSERT INTO `mp_jurusan_intelligence` VALUES (24, 4, 1, 23, 2);
+INSERT INTO `mp_jurusan_intelligence` VALUES (25, 4, 1, 26, 3);
+INSERT INTO `mp_jurusan_intelligence` VALUES (26, 1, 2, 8, 1);
+INSERT INTO `mp_jurusan_intelligence` VALUES (27, 1, 2, 12, 2);
+INSERT INTO `mp_jurusan_intelligence` VALUES (28, 1, 2, 5, 3);
+INSERT INTO `mp_jurusan_intelligence` VALUES (29, 1, 2, 3, 4);
+INSERT INTO `mp_jurusan_intelligence` VALUES (30, 1, 2, 4, 5);
+INSERT INTO `mp_jurusan_intelligence` VALUES (31, 1, 2, 2, 6);
+INSERT INTO `mp_jurusan_intelligence` VALUES (32, 1, 2, 7, 7);
+INSERT INTO `mp_jurusan_intelligence` VALUES (33, 1, 2, 13, 8);
+INSERT INTO `mp_jurusan_intelligence` VALUES (34, 1, 2, 6, 9);
+INSERT INTO `mp_jurusan_intelligence` VALUES (35, 1, 2, 10, 10);
+INSERT INTO `mp_jurusan_intelligence` VALUES (36, 1, 2, 11, 12);
+INSERT INTO `mp_jurusan_intelligence` VALUES (37, 1, 2, 27, 13);
+INSERT INTO `mp_jurusan_intelligence` VALUES (38, 1, 2, 15, 14);
+INSERT INTO `mp_jurusan_intelligence` VALUES (39, 2, 2, 48, 1);
+INSERT INTO `mp_jurusan_intelligence` VALUES (40, 2, 2, 17, 2);
+INSERT INTO `mp_jurusan_intelligence` VALUES (41, 2, 2, 47, 3);
+INSERT INTO `mp_jurusan_intelligence` VALUES (42, 2, 2, 31, 4);
+INSERT INTO `mp_jurusan_intelligence` VALUES (43, 2, 2, 51, 5);
+INSERT INTO `mp_jurusan_intelligence` VALUES (44, 2, 2, 24, 6);
+INSERT INTO `mp_jurusan_intelligence` VALUES (45, 2, 2, 40, 7);
+INSERT INTO `mp_jurusan_intelligence` VALUES (46, 2, 2, 19, 8);
+INSERT INTO `mp_jurusan_intelligence` VALUES (47, 2, 2, 5, 9);
+INSERT INTO `mp_jurusan_intelligence` VALUES (48, 2, 2, 6, 10);
+INSERT INTO `mp_jurusan_intelligence` VALUES (49, 2, 2, 12, 11);
+INSERT INTO `mp_jurusan_intelligence` VALUES (50, 2, 2, 10, 12);
+INSERT INTO `mp_jurusan_intelligence` VALUES (51, 2, 2, 41, 13);
+INSERT INTO `mp_jurusan_intelligence` VALUES (52, 2, 2, 42, 14);
+INSERT INTO `mp_jurusan_intelligence` VALUES (53, 2, 2, 43, 15);
+INSERT INTO `mp_jurusan_intelligence` VALUES (54, 2, 2, 44, 16);
+INSERT INTO `mp_jurusan_intelligence` VALUES (55, 2, 2, 28, 17);
+INSERT INTO `mp_jurusan_intelligence` VALUES (56, 2, 2, 45, 18);
+INSERT INTO `mp_jurusan_intelligence` VALUES (57, 2, 2, 50, 19);
+INSERT INTO `mp_jurusan_intelligence` VALUES (58, 2, 2, 52, 20);
+INSERT INTO `mp_jurusan_intelligence` VALUES (59, 2, 2, 53, 21);
+INSERT INTO `mp_jurusan_intelligence` VALUES (60, 2, 2, 49, 22);
+INSERT INTO `mp_jurusan_intelligence` VALUES (61, 2, 2, 54, 23);
+INSERT INTO `mp_jurusan_intelligence` VALUES (62, 3, 2, 48, 1);
+INSERT INTO `mp_jurusan_intelligence` VALUES (63, 3, 2, 31, 2);
+INSERT INTO `mp_jurusan_intelligence` VALUES (64, 3, 2, 53, 3);
+INSERT INTO `mp_jurusan_intelligence` VALUES (65, 4, 2, 54, 1);
+INSERT INTO `mp_jurusan_intelligence` VALUES (66, 4, 2, 9, 2);
+INSERT INTO `mp_jurusan_intelligence` VALUES (67, 6, 2, 3, 1);
+INSERT INTO `mp_jurusan_intelligence` VALUES (68, 6, 2, 4, 2);
+INSERT INTO `mp_jurusan_intelligence` VALUES (69, 6, 2, 5, 3);
+INSERT INTO `mp_jurusan_intelligence` VALUES (70, 6, 2, 13, 7);
+INSERT INTO `mp_jurusan_intelligence` VALUES (71, 6, 2, 7, 5);
+INSERT INTO `mp_jurusan_intelligence` VALUES (72, 6, 2, 8, 6);
+INSERT INTO `mp_jurusan_intelligence` VALUES (73, 6, 2, 2, 12);
+INSERT INTO `mp_jurusan_intelligence` VALUES (74, 6, 2, 9, 8);
+INSERT INTO `mp_jurusan_intelligence` VALUES (75, 6, 2, 6, 4);
+INSERT INTO `mp_jurusan_intelligence` VALUES (76, 6, 2, 10, 9);
+INSERT INTO `mp_jurusan_intelligence` VALUES (77, 6, 2, 11, 11);
+INSERT INTO `mp_jurusan_intelligence` VALUES (78, 6, 2, 12, 10);
+INSERT INTO `mp_jurusan_intelligence` VALUES (79, 6, 2, 15, 13);
+INSERT INTO `mp_jurusan_intelligence` VALUES (80, 6, 2, 38, 14);
+INSERT INTO `mp_jurusan_intelligence` VALUES (81, 6, 2, 39, 16);
+INSERT INTO `mp_jurusan_intelligence` VALUES (82, 6, 2, 24, 17);
+INSERT INTO `mp_jurusan_intelligence` VALUES (83, 7, 2, 2, 1);
+INSERT INTO `mp_jurusan_intelligence` VALUES (84, 7, 2, 47, 2);
+INSERT INTO `mp_jurusan_intelligence` VALUES (85, 7, 2, 31, 3);
+INSERT INTO `mp_jurusan_intelligence` VALUES (86, 7, 2, 24, 4);
+INSERT INTO `mp_jurusan_intelligence` VALUES (87, 7, 2, 3, 5);
+INSERT INTO `mp_jurusan_intelligence` VALUES (88, 7, 2, 4, 6);
+INSERT INTO `mp_jurusan_intelligence` VALUES (89, 7, 2, 5, 7);
+INSERT INTO `mp_jurusan_intelligence` VALUES (90, 7, 2, 6, 8);
+INSERT INTO `mp_jurusan_intelligence` VALUES (91, 7, 2, 7, 9);
+INSERT INTO `mp_jurusan_intelligence` VALUES (92, 7, 2, 8, 10);
+INSERT INTO `mp_jurusan_intelligence` VALUES (93, 7, 2, 10, 13);
+INSERT INTO `mp_jurusan_intelligence` VALUES (94, 7, 2, 11, 15);
+INSERT INTO `mp_jurusan_intelligence` VALUES (95, 7, 2, 12, 14);
+INSERT INTO `mp_jurusan_intelligence` VALUES (96, 7, 2, 13, 11);
+INSERT INTO `mp_jurusan_intelligence` VALUES (97, 7, 2, 9, 12);
+INSERT INTO `mp_jurusan_intelligence` VALUES (98, 8, 2, 29, 1);
+INSERT INTO `mp_jurusan_intelligence` VALUES (99, 8, 2, 30, 2);
+INSERT INTO `mp_jurusan_intelligence` VALUES (100, 8, 2, 31, 3);
+INSERT INTO `mp_jurusan_intelligence` VALUES (101, 8, 2, 32, 4);
+INSERT INTO `mp_jurusan_intelligence` VALUES (102, 8, 2, 33, 5);
+INSERT INTO `mp_jurusan_intelligence` VALUES (103, 8, 2, 24, 6);
+INSERT INTO `mp_jurusan_intelligence` VALUES (104, 8, 2, 34, 7);
+INSERT INTO `mp_jurusan_intelligence` VALUES (105, 8, 2, 35, 8);
+INSERT INTO `mp_jurusan_intelligence` VALUES (106, 1, 2, 9, 11);
+INSERT INTO `mp_jurusan_intelligence` VALUES (107, 6, 2, 54, 15);
+INSERT INTO `mp_jurusan_intelligence` VALUES (108, 8, 2, 36, 9);
 
 -- ----------------------------
 -- Table structure for mp_jurusan_mapel
@@ -1733,6 +1737,7 @@ CREATE TABLE `mst_univ`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `kd_univ` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `nama_univ` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `deleted_status` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `kd_univ`(`kd_univ` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
@@ -1740,10 +1745,10 @@ CREATE TABLE `mst_univ`  (
 -- ----------------------------
 -- Records of mst_univ
 -- ----------------------------
-INSERT INTO `mst_univ` VALUES (1, 'UNIB', 'UNIVERSITAS BENGKULU');
-INSERT INTO `mst_univ` VALUES (2, 'IAIN-BKL', 'UIN Fatmawati');
-INSERT INTO `mst_univ` VALUES (3, 'POLTEKKES-BKL', 'Politeknik Kesehatan Kemenkes Bengkulu');
-INSERT INTO `mst_univ` VALUES (4, 'UT-BKL', 'Universitas Terbuka');
+INSERT INTO `mst_univ` VALUES (1, 'UNIB', 'UNIVERSITAS BENGKULU', NULL);
+INSERT INTO `mst_univ` VALUES (2, 'IAIN-BKL', 'UIN Fatmawati', 1);
+INSERT INTO `mst_univ` VALUES (3, 'POLTEKKES-BKL', 'Politeknik Kesehatan Kemenkes Bengkulu', 1);
+INSERT INTO `mst_univ` VALUES (4, 'UT-BKL', 'Universitas Terbuka', 1);
 
 -- ----------------------------
 -- Table structure for mst_univ_fakultas
@@ -1752,31 +1757,32 @@ DROP TABLE IF EXISTS `mst_univ_fakultas`;
 CREATE TABLE `mst_univ_fakultas`  (
   `id_fakultas` int NOT NULL AUTO_INCREMENT,
   `nama_fakultas` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `deleted_status` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id_fakultas`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of mst_univ_fakultas
 -- ----------------------------
-INSERT INTO `mst_univ_fakultas` VALUES (1, 'Fakultas Keguruan dan Ilmu Pendidikan');
-INSERT INTO `mst_univ_fakultas` VALUES (2, 'Fakultas Hukum');
-INSERT INTO `mst_univ_fakultas` VALUES (3, 'Fakultas Ekonomi dan Bisnis');
-INSERT INTO `mst_univ_fakultas` VALUES (4, 'Fakultas Ilmu Sosial dan Ilmu Politik');
-INSERT INTO `mst_univ_fakultas` VALUES (5, 'Fakultas Pertanian');
-INSERT INTO `mst_univ_fakultas` VALUES (6, 'Fakultas Matematika dan Ilmu Pengetahuan Alam');
-INSERT INTO `mst_univ_fakultas` VALUES (7, 'Fakultas Teknik');
-INSERT INTO `mst_univ_fakultas` VALUES (8, 'Fakultas Kedokteran dan Ilmu Kesehatan');
-INSERT INTO `mst_univ_fakultas` VALUES (9, 'Fakultas Tarbiyah dan Tadris');
-INSERT INTO `mst_univ_fakultas` VALUES (10, 'Fakultas Syari\'ah');
-INSERT INTO `mst_univ_fakultas` VALUES (11, 'Fakultas Ekonomi dan Bisnis Islam');
-INSERT INTO `mst_univ_fakultas` VALUES (12, 'Fakultas Ushuluddin, Adab dan Dakwah');
-INSERT INTO `mst_univ_fakultas` VALUES (13, 'Keperawatan');
-INSERT INTO `mst_univ_fakultas` VALUES (14, 'Kebidanan');
-INSERT INTO `mst_univ_fakultas` VALUES (15, 'Gizi');
-INSERT INTO `mst_univ_fakultas` VALUES (16, 'Analis Kesehatan');
-INSERT INTO `mst_univ_fakultas` VALUES (17, 'Fakultas Ekonomi');
-INSERT INTO `mst_univ_fakultas` VALUES (18, 'Fakultas Ilmu Pengetahuan Alam dan Teknologi');
-INSERT INTO `mst_univ_fakultas` VALUES (19, 'Fakultas Hukum, Ilmu Sosial dan Ilmu Politik');
+INSERT INTO `mst_univ_fakultas` VALUES (1, 'Fakultas Keguruan dan Ilmu Pendidikan', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (2, 'Fakultas Hukum', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (3, 'Fakultas Ekonomi dan Bisnis', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (4, 'Fakultas Ilmu Sosial dan Ilmu Politik', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (5, 'Fakultas Pertanian', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (6, 'Fakultas Matematika dan Ilmu Pengetahuan Alam', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (7, 'Fakultas Teknik', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (8, 'Fakultas Kedokteran dan Ilmu Kesehatan', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (9, 'Fakultas Tarbiyah dan Tadris', 1);
+INSERT INTO `mst_univ_fakultas` VALUES (10, 'Fakultas Syari\'ah', 1);
+INSERT INTO `mst_univ_fakultas` VALUES (11, 'Fakultas Ekonomi dan Bisnis Islam', 1);
+INSERT INTO `mst_univ_fakultas` VALUES (12, 'Fakultas Ushuluddin, Adab dan Dakwah', 1);
+INSERT INTO `mst_univ_fakultas` VALUES (13, 'Keperawatan', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (14, 'Kebidanan', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (15, 'Gizi', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (16, 'Analis Kesehatan', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (17, 'Fakultas Ekonomi', NULL);
+INSERT INTO `mst_univ_fakultas` VALUES (18, 'Fakultas Ilmu Pengetahuan Alam dan Teknologi', 1);
+INSERT INTO `mst_univ_fakultas` VALUES (19, 'Fakultas Hukum, Ilmu Sosial dan Ilmu Politik', 1);
 
 -- ----------------------------
 -- Table structure for mst_univ_jurusan
@@ -1794,7 +1800,7 @@ CREATE TABLE `mst_univ_jurusan`  (
   INDEX `fakultas_id_id_fakultas`(`fakultas_id` ASC) USING BTREE,
   CONSTRAINT `fakultas_id_id_fakultas` FOREIGN KEY (`fakultas_id`) REFERENCES `mst_univ_fakultas` (`id_fakultas`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `univ_kd_kd_univ` FOREIGN KEY (`univ_kd`) REFERENCES `mst_univ` (`kd_univ`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 123 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 128 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of mst_univ_jurusan
@@ -1807,7 +1813,7 @@ INSERT INTO `mst_univ_jurusan` VALUES (5, 'UNIB', 1, 'Pendidikan Biologi', 'S1',
 INSERT INTO `mst_univ_jurusan` VALUES (6, 'UNIB', 1, 'Pendidikan Fisika', 'S1', NULL);
 INSERT INTO `mst_univ_jurusan` VALUES (7, 'UNIB', 1, 'Pendidikan Guru PAUD', 'S1', NULL);
 INSERT INTO `mst_univ_jurusan` VALUES (8, 'UNIB', 1, 'Pendidikan Guru Sekolah Dasar', 'S1', NULL);
-INSERT INTO `mst_univ_jurusan` VALUES (9, 'UNIB', 1, 'Pendidikan Jasmani', 'S1', NULL);
+INSERT INTO `mst_univ_jurusan` VALUES (9, 'UNIB', 1, 'Pendidikan Jasmani', 'S1', 1);
 INSERT INTO `mst_univ_jurusan` VALUES (10, 'UNIB', 1, 'Pendidikan Kimia', 'S1', NULL);
 INSERT INTO `mst_univ_jurusan` VALUES (11, 'UNIB', 1, 'Pendidikan Non Formal', 'S1', NULL);
 INSERT INTO `mst_univ_jurusan` VALUES (12, 'UNIB', 1, 'Pendidikan Matematika', 'S1', NULL);
@@ -1916,6 +1922,8 @@ INSERT INTO `mst_univ_jurusan` VALUES (115, 'UT-BKL', 19, 'Ilmu Pemerintah', '',
 INSERT INTO `mst_univ_jurusan` VALUES (116, 'UT-BKL', 19, 'Sosiologi', '', 1);
 INSERT INTO `mst_univ_jurusan` VALUES (117, 'UT-BKL', 19, 'Ilmu Komunikasi', '', 1);
 INSERT INTO `mst_univ_jurusan` VALUES (118, 'UT-BKL', 19, 'Ilmu Hukum', '', 1);
+INSERT INTO `mst_univ_jurusan` VALUES (123, 'UNIB', 15, 'test prodi', 'D3', 1);
+INSERT INTO `mst_univ_jurusan` VALUES (127, 'UNIB', 15, 'test prodi', 'D3', 1);
 
 -- ----------------------------
 -- Table structure for mst_user
@@ -1931,15 +1939,17 @@ CREATE TABLE `mst_user`  (
   `no_hp` int NULL DEFAULT NULL,
   `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `foto_profil` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `deleted_status` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id_user`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 40 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 42 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of mst_user
 -- ----------------------------
-INSERT INTO `mst_user` VALUES (10, 'admin', 'admin', 2, '$2y$10$GSXGXgmZ8o5IpN..BGEg8eH7o4odEDkVwyzMBWvUmg1F85OnHxBW.', 1, NULL, NULL, NULL);
-INSERT INTO `mst_user` VALUES (38, 'anisa jelita', 'anisajelita99@gmail.com', 1, '$2y$10$qoNbIm.mWI3LiyF8UeKf6eFSyItT6aOOyuRBIzpokLeusmbgnbrqa', 1, 2147483647, NULL, NULL);
-INSERT INTO `mst_user` VALUES (39, 'Anisa', 'anisajelitachan@gmail.com', 1, '$2y$10$zpyd9tPlz6/GCk1Pspfgc.qULF3axvdE4orqt54rY6xA/2un9pUCq', 1, 2147483647, NULL, NULL);
+INSERT INTO `mst_user` VALUES (10, 'admin', 'admin', 2, '$2y$10$GSXGXgmZ8o5IpN..BGEg8eH7o4odEDkVwyzMBWvUmg1F85OnHxBW.', 1, NULL, NULL, NULL, NULL);
+INSERT INTO `mst_user` VALUES (38, 'anisa jelita', 'anisajelita99@gmail.com', 1, '$2y$10$qoNbIm.mWI3LiyF8UeKf6eFSyItT6aOOyuRBIzpokLeusmbgnbrqa', 0, 2147483647, NULL, NULL, NULL);
+INSERT INTO `mst_user` VALUES (39, 'Anisa', 'anisajelitachan@gmail.com', 1, '$2y$10$zpyd9tPlz6/GCk1Pspfgc.qULF3axvdE4orqt54rY6xA/2un9pUCq', 1, 2147483647, NULL, NULL, NULL);
+INSERT INTO `mst_user` VALUES (40, 'admin2', 'admin2', 2, '$2y$10$6V6TXIeHhRXrQI5/bQv.V..OhLk4OuK2j9I.iZbHfOCitZJK2aazu', 0, NULL, NULL, NULL, 1);
 
 -- ----------------------------
 -- Table structure for siswa
@@ -1970,7 +1980,7 @@ CREATE TABLE `trx_nilai_rapor`  (
   `smt` int NULL DEFAULT NULL,
   `deleted_status` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id_rapor`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 49 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 121 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of trx_nilai_rapor
@@ -2011,6 +2021,54 @@ INSERT INTO `trx_nilai_rapor` VALUES (45, 'anisajelitachan@gmail.com', 9, 84, 2,
 INSERT INTO `trx_nilai_rapor` VALUES (46, 'anisajelitachan@gmail.com', 10, 78, 2, NULL);
 INSERT INTO `trx_nilai_rapor` VALUES (47, 'anisajelitachan@gmail.com', 11, 82.5, 2, NULL);
 INSERT INTO `trx_nilai_rapor` VALUES (48, 'anisajelitachan@gmail.com', 12, 82, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (73, 'admin', 1, 90, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (74, 'admin', 2, 90, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (75, 'admin', 3, 90, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (76, 'admin', 4, 80, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (77, 'admin', 5, 82, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (78, 'admin', 6, 90, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (79, 'admin', 7, 89, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (80, 'admin', 8, 100, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (81, 'admin', 9, 90, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (82, 'admin', 10, 90, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (83, 'admin', 11, 96, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (84, 'admin', 12, 80, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (85, 'admin', 1, 70, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (86, 'admin', 2, 90, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (87, 'admin', 3, 75, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (88, 'admin', 4, 76, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (89, 'admin', 5, 88, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (90, 'admin', 6, 91, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (91, 'admin', 7, 89, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (92, 'admin', 8, 99, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (93, 'admin', 9, 75, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (94, 'admin', 10, 80, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (95, 'admin', 11, 95, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (96, 'admin', 12, 80, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (97, 'admin2', 1, 80, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (98, 'admin2', 2, 60, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (99, 'admin2', 3, 70, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (100, 'admin2', 4, 80, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (101, 'admin2', 5, 90, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (102, 'admin2', 6, 70, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (103, 'admin2', 7, 80, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (104, 'admin2', 8, 76, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (105, 'admin2', 9, 98, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (106, 'admin2', 10, 90, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (107, 'admin2', 11, 50, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (108, 'admin2', 12, 79, 1, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (109, 'admin2', 1, 60, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (110, 'admin2', 2, 60, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (111, 'admin2', 3, 60, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (112, 'admin2', 4, 80, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (113, 'admin2', 5, 96, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (114, 'admin2', 6, 70, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (115, 'admin2', 7, 80, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (116, 'admin2', 8, 80, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (117, 'admin2', 9, 99, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (118, 'admin2', 10, 95, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (119, 'admin2', 11, 90, 2, NULL);
+INSERT INTO `trx_nilai_rapor` VALUES (120, 'admin2', 12, 79, 2, NULL);
 
 -- ----------------------------
 -- Table structure for trx_tes_kepribadian
@@ -2024,7 +2082,7 @@ CREATE TABLE `trx_tes_kepribadian`  (
   `tgl_tes` date NULL DEFAULT NULL,
   `deleted_status` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 401 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 441 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of trx_tes_kepribadian
@@ -2163,7 +2221,7 @@ CREATE TABLE `trx_tes_kepribadian_hasil`  (
   `deleted_status` tinyint(1) NULL DEFAULT NULL,
   `kp_result_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of trx_tes_kepribadian_hasil
@@ -2185,7 +2243,7 @@ CREATE TABLE `trx_tes_talenta`  (
   `talenta_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `deleted_status` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 721 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 801 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of trx_tes_talenta
@@ -2430,6 +2488,86 @@ INSERT INTO `trx_tes_talenta` VALUES (717, 77, 'anisajelita99@gmail.com', 4, '20
 INSERT INTO `trx_tes_talenta` VALUES (718, 78, 'anisajelita99@gmail.com', 4, '2023-12-29', 'KN', NULL);
 INSERT INTO `trx_tes_talenta` VALUES (719, 79, 'anisajelita99@gmail.com', 4, '2023-12-29', 'KN', NULL);
 INSERT INTO `trx_tes_talenta` VALUES (720, 80, 'anisajelita99@gmail.com', 4, '2023-12-29', 'KN', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (721, 1, 'admin2', 3, '2024-01-03', 'VL', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (722, 2, 'admin2', 5, '2024-01-03', 'VL', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (723, 3, 'admin2', 1, '2024-01-03', 'VL', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (724, 4, 'admin2', 4, '2024-01-03', 'VL', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (725, 5, 'admin2', 3, '2024-01-03', 'VL', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (726, 6, 'admin2', 3, '2024-01-03', 'VL', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (727, 7, 'admin2', 5, '2024-01-03', 'VL', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (728, 8, 'admin2', 1, '2024-01-03', 'VL', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (729, 9, 'admin2', 2, '2024-01-03', 'VL', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (730, 10, 'admin2', 2, '2024-01-03', 'VL', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (731, 11, 'admin2', 3, '2024-01-03', 'LM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (732, 12, 'admin2', 4, '2024-01-03', 'LM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (733, 13, 'admin2', 4, '2024-01-03', 'LM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (734, 14, 'admin2', 2, '2024-01-03', 'LM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (735, 15, 'admin2', 5, '2024-01-03', 'LM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (736, 16, 'admin2', 2, '2024-01-03', 'LM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (737, 17, 'admin2', 3, '2024-01-03', 'LM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (738, 18, 'admin2', 4, '2024-01-03', 'LM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (739, 19, 'admin2', 4, '2024-01-03', 'LM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (740, 20, 'admin2', 2, '2024-01-03', 'LM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (741, 21, 'admin2', 2, '2024-01-03', 'VS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (742, 22, 'admin2', 3, '2024-01-03', 'VS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (743, 23, 'admin2', 2, '2024-01-03', 'VS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (744, 24, 'admin2', 4, '2024-01-03', 'VS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (745, 25, 'admin2', 3, '2024-01-03', 'VS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (746, 26, 'admin2', 2, '2024-01-03', 'VS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (747, 27, 'admin2', 3, '2024-01-03', 'VS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (748, 28, 'admin2', 4, '2024-01-03', 'VS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (749, 29, 'admin2', 5, '2024-01-03', 'VS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (750, 30, 'admin2', 4, '2024-01-03', 'VS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (751, 31, 'admin2', 3, '2024-01-03', 'KS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (752, 32, 'admin2', 2, '2024-01-03', 'KS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (753, 33, 'admin2', 1, '2024-01-03', 'KS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (754, 34, 'admin2', 1, '2024-01-03', 'KS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (755, 35, 'admin2', 2, '2024-01-03', 'KS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (756, 36, 'admin2', 3, '2024-01-03', 'KS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (757, 37, 'admin2', 3, '2024-01-03', 'KS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (758, 38, 'admin2', 3, '2024-01-03', 'KS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (759, 39, 'admin2', 4, '2024-01-03', 'KS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (760, 40, 'admin2', 4, '2024-01-03', 'KS', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (761, 41, 'admin2', 3, '2024-01-03', 'KM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (762, 42, 'admin2', 4, '2024-01-03', 'KM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (763, 43, 'admin2', 5, '2024-01-03', 'KM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (764, 44, 'admin2', 4, '2024-01-03', 'KM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (765, 45, 'admin2', 3, '2024-01-03', 'KM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (766, 46, 'admin2', 2, '2024-01-03', 'KM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (767, 47, 'admin2', 1, '2024-01-03', 'KM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (768, 48, 'admin2', 2, '2024-01-03', 'KM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (769, 49, 'admin2', 2, '2024-01-03', 'KM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (770, 50, 'admin2', 2, '2024-01-03', 'KM', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (771, 51, 'admin2', 3, '2024-01-03', 'KIE', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (772, 52, 'admin2', 3, '2024-01-03', 'KIE', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (773, 53, 'admin2', 3, '2024-01-03', 'KIE', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (774, 54, 'admin2', 3, '2024-01-03', 'KIE', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (775, 55, 'admin2', 3, '2024-01-03', 'KIE', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (776, 56, 'admin2', 4, '2024-01-03', 'KIE', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (777, 57, 'admin2', 5, '2024-01-03', 'KIE', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (778, 58, 'admin2', 4, '2024-01-03', 'KIE', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (779, 59, 'admin2', 4, '2024-01-03', 'KIE', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (780, 60, 'admin2', 5, '2024-01-03', 'KIE', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (781, 61, 'admin2', 3, '2024-01-03', 'KIA', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (782, 62, 'admin2', 4, '2024-01-03', 'KIA', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (783, 63, 'admin2', 3, '2024-01-03', 'KIA', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (784, 64, 'admin2', 2, '2024-01-03', 'KIA', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (785, 65, 'admin2', 3, '2024-01-03', 'KIA', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (786, 66, 'admin2', 3, '2024-01-03', 'KIA', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (787, 67, 'admin2', 3, '2024-01-03', 'KIA', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (788, 68, 'admin2', 3, '2024-01-03', 'KIA', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (789, 69, 'admin2', 3, '2024-01-03', 'KIA', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (790, 70, 'admin2', 4, '2024-01-03', 'KIA', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (791, 71, 'admin2', 4, '2024-01-03', 'KN', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (792, 72, 'admin2', 3, '2024-01-03', 'KN', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (793, 73, 'admin2', 2, '2024-01-03', 'KN', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (794, 74, 'admin2', 1, '2024-01-03', 'KN', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (795, 75, 'admin2', 2, '2024-01-03', 'KN', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (796, 76, 'admin2', 3, '2024-01-03', 'KN', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (797, 77, 'admin2', 3, '2024-01-03', 'KN', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (798, 78, 'admin2', 3, '2024-01-03', 'KN', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (799, 79, 'admin2', 3, '2024-01-03', 'KN', NULL);
+INSERT INTO `trx_tes_talenta` VALUES (800, 80, 'admin2', 3, '2024-01-03', 'KN', NULL);
 
 -- ----------------------------
 -- Table structure for trx_tes_talenta_hasil
@@ -2444,7 +2582,7 @@ CREATE TABLE `trx_tes_talenta_hasil`  (
   `deleted_status` tinyint(1) NULL DEFAULT NULL,
   `hasil_talenta_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of trx_tes_talenta_hasil
@@ -2452,5 +2590,6 @@ CREATE TABLE `trx_tes_talenta_hasil`  (
 INSERT INTO `trx_tes_talenta_hasil` VALUES (1, 'KIE', '48', 'KECERDASAN INTERPERSONAL', 'admin', NULL, 6);
 INSERT INTO `trx_tes_talenta_hasil` VALUES (4, 'KS', '50', 'KECERDASAN KINESTETIK', 'anisajelitachan@gmail.com', NULL, 4);
 INSERT INTO `trx_tes_talenta_hasil` VALUES (5, 'KS', '40', 'KECERDASAN KINESTETIK', 'anisajelita99@gmail.com', NULL, 4);
+INSERT INTO `trx_tes_talenta_hasil` VALUES (6, 'KIE', '37', 'KECERDASAN INTERPERSONAL', 'admin2', NULL, 6);
 
 SET FOREIGN_KEY_CHECKS = 1;

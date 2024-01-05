@@ -19,7 +19,7 @@ class C_TesTalenta extends BaseController
     public function indexQuizTalenta()
     {
         $data['title']    = 'Quiz';
-        $data['subtitle'] = 'Tes Talenta';
+        $data['subtitle'] = 'Tes Kecerdasan Majemuk';
         $data['talenta']  = $this->masterTesModel->get_all_tes_talenta()->getResultArray();
         // dd($data);
 
@@ -44,13 +44,13 @@ class C_TesTalenta extends BaseController
     public function saveQuizTalenta()
     {
         $get_count = $this->masterTesModel->get_count_jlh_tes_talenta()->getResultArray();
-        $count     = (int)$get_count[0]['count_per_id'];
+        $count     = (int) $get_count[0]['count_per_id'];
         $data      = [];
         for ($i = 1; $i <= $count; $i++) {
             $jawaban = explode('|', $this->request->getVar($i));
             $data[] = array(
                 'id_talenta'       => $i,
-                'skor'             => (int)$jawaban[0],
+                'skor'             => (int) $jawaban[0],
                 'talenta_kategori' => $jawaban[1],
                 'tgl_tes'          => date('Y-m-d'),
                 'uname'            => $_SESSION['uname']
@@ -70,7 +70,7 @@ class C_TesTalenta extends BaseController
                     $counting                  = $this->quizModel->get_count_hasil_tes_talenta_by_uname($uname)->getResultArray()[0];
                     $data1['uname']            = $uname;
                     $data1['kategori_talenta'] = $counting['talenta_kategori'];
-                    $data1['total_skor']       = (int)$counting['counting'];
+                    $data1['total_skor']       = (int) $counting['counting'];
                     $data1['hasil']            = $counting['hasil'];
                     $data1['hasil_talenta_id'] = $counting['id_hasil_talenta'];
                     // dd($data1);

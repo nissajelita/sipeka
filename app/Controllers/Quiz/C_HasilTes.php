@@ -32,6 +32,9 @@ class C_HasilTes extends BaseController
         $data['mapel']          =  $this->masterTesModel->get_all_mapel()->getResultArray();
 
         // dd($data['rapor']);
+        $array1 = array();
+        $array2 = array();
+        $array3 = array();
 
         //START : PERANGKINGAN
         // ---------------------------------- STEP PERSIAPAN (GET DATA JURUSAN)--------------------------------------------
@@ -90,6 +93,8 @@ class C_HasilTes extends BaseController
                 }
             }
         }
+
+
         foreach ($array1 as $a) {
             $bobot1 = $bobot2 = null;
 
@@ -120,6 +125,7 @@ class C_HasilTes extends BaseController
         // dd($array2);
 
         // ---------------------------------- STEP 5 - INDEX PREFERENSI ------------------------
+        // dd($array2);
         foreach ($array2 as $ar) {
             $id_jurusan1 = $ar['id_jurusan1'];
             $id_jurusan2 = $ar['id_jurusan2'];

@@ -117,5 +117,36 @@ class C_User extends BaseController
         return view("Admin/User/modals/formEditUser", $data);
     }
 
+    public function hapusUser()
+    {
+        $id = $this->request->getVar('id_user');
+
+        $data['stt_user'] = 0;
+        $data['deleted_status'] = 1;
+        $data['id_user'] = $id;
+        // dd($data);
+
+        try {
+            $update_user = $this->userModel->post_delete_data_user($data);
+
+            if ($update_user) {
+                $result = array(
+                    'Code' => 200,
+                    'Message' => 'User Berhasil Dihapus'
+                );
+            } else {
+                throw new Exception('Gagal menghapus data user');
+            }
+        } catch (Exception $e) {
+            $result = array(
+                'Status' => array(
+                    'Code' => 500,
+                    'Message' => $e->getMessage()
+                    )
+                );
+        }
+        return json_encode($result);
+    }
+
 
 }

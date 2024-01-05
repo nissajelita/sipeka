@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <h6 class="text-warning">Step 2</h6>
-                <h3 class=" card-text fw-bolder">Tes Talenta</h3>
+                <h3 class=" card-text fw-bolder">Tes Kecerdasan Majemuk</h3>
                 <hr class="mb-2">
                 <p class="card-text font-small-3">Ketahui tipe kecerdasan paling dominan pada diri kamu!
                 </p>
@@ -63,7 +63,7 @@
         <div class="card card-congratulation-medal">
             <div class="card-body">
                 <h6 class="text-warning">Step 2</h6>
-                <h3 class=" card-text fw-bolder">Tes Talenta</h3>
+                <h3 class=" card-text fw-bolder">Tes Kecerdasan Majemuk</h3>
                 <p>Ketahui tipe kecerdasan paling dominan pada diri kamu!</p>
                 <button type="button" class="btn btn-primary waves-effect waves-float waves-light">View Sales</button>
                 <img src="<?= base_url() ?>/templates/app-assets/images/illustration/badge.svg" class="congratulation-medal" alt="Medal Pic">

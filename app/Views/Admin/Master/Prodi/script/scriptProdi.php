@@ -1,12 +1,11 @@
-<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 <script>
-     $(document).ready(function() {
-        // $('#dataTable').DataTable();
-    });
+    //  $(document).ready(function() {
+        
+    // });
 
-    function btnSimpanUser() {
-        // alert('test');   
-        console.log($('#formTambahUser').serialize());
+
+    function btnSimpanProdi() {
+        console.log($('#formProdi').serialize());
         Swal.fire({
         title: 'Konfirmasi',
         text: 'Anda yakin ingin menyimpan data?',
@@ -18,9 +17,9 @@
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'POST',
-                        url: '<?= base_url('user/simpan'); ?>',
+                        url: '<?= base_url('prodi/simpan'); ?>',
                         dataType: 'json',
-                        data: $('#formTambahUser').serialize(),
+                        data: $('#formProdi').serialize(),
                         success: function(response) {
                             console.log(response);
                             if (response.Code === 200) {
@@ -55,40 +54,43 @@
     }
 
 
-    function btnEditUser(uname)
+    function btnEdit(iD)
     {
-        console.log(uname);
-        // alert('test');
+        // alert(iD);
+        
         $.ajax({
             method: "POST",
-            url: '<?= base_url('user/edituser') ?>',
+            url: '<?= base_url('prodi/edit') ?>',
             data: {
-                username: uname,
+                id_prodi: iD,
             },
             beforeSend: function() {
-                $("#dataEditUser").hide();
+                $("#dataEditProdi").hide();
             },
             complete: function() {
-                $(".loading2").hide();
-                $("#dataEditUser").show();
+                // $(".loading2").hide();
+                $("#dataEditProdi").show();
             },
             success: function(data) {
-                console.log(data);
-                $('#dataEditUser').html(data);
+                $('#dataEditProdi').html(data);
                 feather.replace();
             },
-            error: function() {
-                console.log('error');
-            alert('Terjadi kesalahan dalam mengambil data pengguna.');
-        }
-
-        });
-        $('#editUser').modal('show');
+            error: function(xhr, status, error) {
+                console.log(xhr)
+                var errorMessage = +': ' + xhr.statusText
+                swal.fire(
+                    '404',
+                    xhr.responseText,
+                    'warning'
+                )
+            }
+    });
+    $('#editProdi').modal('show');
         
     }
 
-    function btnUpdateUser() {
-        console.log($('#formEditUser').serialize());
+    function btnSimpan() {
+        console.log($('#formEditProdi').serialize());
         Swal.fire({
         title: 'Konfirmasi',
         text: 'Anda yakin ingin menyimpan data?',
@@ -100,14 +102,14 @@
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'POST',
-                        url: '<?= base_url('user/simpan'); ?>',
+                        url: '<?= base_url('prodi/simpan'); ?>',
                         dataType: 'json',
-                        data: $('#formEditUser').serialize(),
+                        data: $('#formEditProdi').serialize(),
                         success: function(response) {
                             console.log(response);
                             if (response.Code === 200) {
                             Swal.fire(
-                                'Update!',
+                                'Simpan!',
                                 response.Message,
                                 'success'
                             );
@@ -135,9 +137,8 @@
                 }
             });
     }
-
-    function btnDeleteUser(iD)
-    {
+    function btnDelete(iD) {
+        // alert(iD);
         Swal.fire({
         title: 'Konfirmasi',
         text: 'Anda yakin ingin menghapus data?',
@@ -149,16 +150,16 @@
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'POST',
-                        url: '<?= base_url('user/delete'); ?>',
+                        url: '<?= base_url('prodi/delete'); ?>',
                         dataType: 'json',
                         data: {
-                            id_user: iD
+                            id_prodi: iD
                         },
                         success: function(response) {
                             console.log(response);
                             if (response.Code === 200) {
                             Swal.fire(
-                                'Update!',
+                                'Simpan!',
                                 response.Message,
                                 'success'
                             );

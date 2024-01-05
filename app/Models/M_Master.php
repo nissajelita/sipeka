@@ -14,23 +14,50 @@ class M_Master extends Model
     public function get_all_prodi()
     {
         $query = $this->db->query("SELECT * FROM mst_univ_jurusan
-        LEFT JOIN mst_univ_fakultas ON mst_univ_fakultas.id_fakultas = mst_univ_jurusan.fakultas_id WHERE univ_kd = 'UNIB' and deleted_status is not true");
+        LEFT JOIN mst_univ_fakultas ON mst_univ_fakultas.id_fakultas = mst_univ_jurusan.fakultas_id WHERE univ_kd = 'UNIB' and mst_univ_fakultas.deleted_status is not true and mst_univ_jurusan.deleted_status is null");
+        return $query;
+    }
+    public function get_all_prodi_by_id($param)
+    {
+        $query = $this->db->query("SELECT * FROM mst_univ_jurusan where id=?", $param);
         return $query;
     }
     public function get_all_universitas()
     {
-        $query = $this->db->query("SELECT * FROM mst_univ");
+        $query = $this->db->query("SELECT * FROM mst_univ where deleted_status is null");
         return $query;
     }
     public function get_all_fakultas()
     {
-        $query = $this->db->query("SELECT * FROM mst_univ_fakultas");
+        $query = $this->db->query("SELECT * FROM mst_univ_fakultas where deleted_status is null");
         return $query;
     }
     public function post_save_prodi($data)
     {
         $query = $this->db->table('mst_univ_jurusan')->insert($data);
         return $query ? true : false;
+    }
+
+    public function post_update_prodi($data)
+    {
+        $builder = $this->db->table('mst_univ_jurusan');
+        $builder->set('univ_kd', $data['univ_kd']);
+        $builder->set('fakultas_id', $data['fakultas_id']);
+        $builder->set('nama_jurusan', $data['nama_jurusan']);
+        $builder->set('jenjang', $data['jenjang']);
+        $builder->where('id', $data['id']);
+        $builder->update();
+        return $builder ? true : false;
+
+    }
+    public function post_deleted_prodi($data)
+    {
+        $builder = $this->db->table('mst_univ_jurusan');
+        $builder->set('deleted_status', $data['deleted_status']);
+        $builder->where('id', $data['id']);
+        $builder->update();
+        return $builder ? true : false;
+
     }
     public function get_all_tes_kepribadian()
     {
@@ -103,7 +130,7 @@ class M_Master extends Model
     }
 
     // END : TALENTA
-    
+
     // START : NILAI RAPOR
     public function get_all_kategori_mapel()
     {

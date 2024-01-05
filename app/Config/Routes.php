@@ -34,8 +34,11 @@ $routes->add('/register/process', 'Auth::registerProcess');
 $routes->add('user', 'Admin\C_User::index', ['filter' => 'isAdmin']);
 $routes->add('user/simpan', 'Admin\C_User::simpan', ['filter' => 'belumLogin']);
 $routes->add('user/edituser', 'Admin\C_User::editUser', ['filter' => 'belumLogin']);
+$routes->add('user/delete', 'Admin\C_User::hapusUser', ['filter' => 'belumLogin']);
 $routes->add('prodi', 'Admin\C_Prodi::index', ['filter' => 'isAdmin']);
-$routes->add('universitas/simpan', 'Admin\C_universitas::simpan', ['filter' => 'isAdmin']);
+$routes->add('prodi/simpan', 'Admin\C_Prodi::simpan', ['filter' => 'isAdmin']);
+$routes->add('prodi/edit', 'Admin\C_Prodi::edit', ['filter' => 'isAdmin']);
+$routes->add('prodi/delete', 'Admin\C_Prodi::hapus', ['filter' => 'isAdmin']);
 
 
 // ADMIN MAPPING

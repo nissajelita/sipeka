@@ -19,7 +19,7 @@
     <div class="card-footer">
         <?php if(empty($tes_talenta)) { ?>
         <div class="d-grid mb-1">
-            <a type="button" class="btn btn-primary waves-effect waves-float waves-light" href="<?= base_url('/quiz-talenta') ?>">Lanjut ke Tes Talenta</a>
+            <a type="button" class="btn btn-primary waves-effect waves-float waves-light" href="<?= base_url('/quiz-talenta') ?>">Lanjut ke Tes Kecerdasan Majemuk</a>
         </div>
         <?php } if(!empty($rapor) && (!empty($tes_kp) || !empty($tes_talenta))) {?>
         <div class="d-grid mb-1">
